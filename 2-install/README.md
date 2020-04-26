@@ -12,7 +12,7 @@ Right now, we can have a nice Kubernetes cluster running using one (or more, if 
 	- If you use Linux, you can use [Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/). It's a tool that allows to do pretty much the same that Docker for Desktop does: install a very minimal cluster for doing testing and development stuff locally. It has some minor differences with Docker for Desktop. Also, this relies on lot of Hypervisors (Like Virtual Box) to work, and it is multiplatform, so you can use this option also for Windows or Mac if you like.
 	
 -  **Running it on a single (Bare Metal or VM) host, that accept connections from other host in your network, again, for testing and development pruposes.** 
-	- You run some commands, do some nasty stuff that you wouldn't do on a production environment, and you can have a single VM similar to that of Minikube, but that has connectivity from all hosts on your network, or, for example, if you want to install it on an server running an Hypervisor.
+	- You run some commands, do some nasty stuff that you wouldn't do on a production environment, and you can have a single VM similar to that of Minikube, but that has connectivity from all hosts on your network, or, for example, if you want to install it on an server running an Hypervisor, or even a single physical PC or Server that you would like to use for this.
 
 - **Running in on multiple (Bare Metal or VM) hosts, pretty much like the last one, but having redundancy with more than one hosts, and thus, being suitable for Production.**
 	- This is the **MOST DIFFICULT** setup to do. Only do it if you don't have other option.
