@@ -104,6 +104,7 @@ chmod +x /bin/kubectx && chmod +x /bin/kubens
 echo ""
 
 # Ingress controller reference: https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal"
+#
 echo "Installing Nginx Ingress Controller" 
 echo ""
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/baremetal/deploy.yaml
