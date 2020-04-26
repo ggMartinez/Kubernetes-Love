@@ -17,11 +17,12 @@ Right now, we can have a nice Kubernetes cluster running using one (or more, if 
 - **Running in on multiple (Bare Metal or VM) hosts, pretty much like the last one, but having redundancy with more than one hosts, and thus, being suitable for Production.**
 	- This is the **MOST DIFFICULT** setup to do. Only do it if you don't have other option.
     - This is the most manual installation in the cosmos. You have at least 5 hosts running Linux and Docker, and use them to install Kubernetes. They can be VMs (wheter on your own hypervisor, or instances running on a cloud privider, like AWS EC2 for example) and/or Physical servers. Even they can be, for example, in separated networks if you want. The only condition here is that all of them has connectivity between each others.
+    - This is the recommended way to use Kubernetes in Production, if you want to host (and therefore, maintain) all the infrastructure by yourself.
 
 - **Using some Cloud Providers that offers Kubernetes-as-a-Service, save time, butt pain, and be happier**
 	- With this method, you only use the Kubernetes Service that some cloud providers offers to you.
 	- You don't need to install anything on your end. You only will get an endpoint for accesing the cluster, and you only have Worker Nodes. Don't even need to worry about managing and administrating the Master servers, the provider will do it for you.
-	- This is the recommended way to use kubernetes in production.
+	- This is the recommended way to use Kubernetes in Production if you don't want to host and maintain all the infrastructure by yourself.
 
 Well then, let's go to some steps!
 
