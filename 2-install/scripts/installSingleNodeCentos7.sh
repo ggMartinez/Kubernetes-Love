@@ -26,9 +26,9 @@ echo '#######################################################################'
 
 echo ''
 echo ''
-read -p 'YOUR ANSWER (y/Y to say "yes"): ' -sn1 beSure
+read -p 'YOUR ANSWER (say "yes" to continue): ' beSure
 
-if [ $beSure != 'Y' ] || [ $beSure != 'y' ]
+if [ $beSure != 'yes' ]
     then 
     echo 'ABORTING ALL!!!...'
     exit 1
@@ -37,7 +37,7 @@ fi
 echo "Disabling Firewall"
 echo ""
 chkconfig firewalld off
-chkconfig iptables-services off 
+chkconfig iptables-services off
 echo ""
 
 echo "Disabling SELinux"
@@ -47,8 +47,8 @@ setenforce 0
 
 echo "Installing Docker"
 echo ""
-yum install -y docker 
-service docker start 
+yum install -y docker
+service docker start
 chkconfig docker on
 
 echo "Doing some nasty things with sysctl"
@@ -98,14 +98,14 @@ echo ""
 
 echo "Installing Kubectx and Kubens tools"
 echo ""
-curl https://raw.githubusercontent.com/ahmetb/kubectx/master/kubens > /bin/kubens 
-curl https://raw.githubusercontent.com/ahmetb/kubectx/master/kubectx > /bin/kubectx 
-chmod +x /bin/kubectx && chmod +x /bin/kubens 
+curl https://raw.githubusercontent.com/ahmetb/kubectx/master/kubens > /bin/kubens
+curl https://raw.githubusercontent.com/ahmetb/kubectx/master/kubectx > /bin/kubectx
+chmod +x /bin/kubectx && chmod +x /bin/kubens
 echo ""
 
 # Ingress controller reference: https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal"
 #
-echo "Installing Nginx Ingress Controller" 
+echo "Installing Nginx Ingress Controller"
 echo ""
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/baremetal/deploy.yaml
 echo ""
