@@ -109,3 +109,5 @@ echo "Installing Nginx Ingress Controller"
 echo ""
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/baremetal/deploy.yaml
 echo ""
+
+# If you want Load Balacing with specific IP address, you can use MetalLB (https://metallb.universe.tf/installation/)
